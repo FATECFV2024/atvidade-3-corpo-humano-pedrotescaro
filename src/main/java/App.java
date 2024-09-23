@@ -1,30 +1,17 @@
 package main.java;
-import java.util.Scanner;
 
 public class App {
-        //Comentário
+    public static void main(String[] args) {
+     // Instanciação do objeto CorpoHumano
+     CorpoHumano c1 = new CorpoHumano(70, 0.07, 1000, 1.75);
 
-    public static void funcao_teste (){
-        //Biblioteca para entrada de dados
-        Scanner ler = new Scanner(System.in); 
+     // Exibe os valores iniciais
+     System.out.println("Massa: " + c1.getMassa() + " kg");
+     System.out.println("Volume: " + c1.getVolume() + " m³");
+     System.out.println("Densidade: " + c1.getDensidade() + " kg/m³");
+     System.out.println("Altura: " + c1.getAltura() + " m");
 
-        //variável local a
-        String v2;
-        int v1;
-
-        System.out.println("Comando de Saida de Dados");
-        
-        System.out.printf("Informe uma palavra: ");
-        v2 = ler.next();
-
-        System.out.printf("Informe um número: ");
-        v1 = ler.nextInt();
-
-        System.out.printf(v2+" "+v1);
-    }
-    public static void main(String[] args) throws Exception {
-        funcao_teste();
-
-
+     // Calcula e exibe o IMC
+     System.out.println("IMC: " + c1.calcularIMC());
     }
 }
