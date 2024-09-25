@@ -22,7 +22,8 @@ public class App {
         // Ocorrência: erro de compilação, pois o atributo 'massa' é privado e não pode ser acessado diretamente.
 
         // 2. Alteração de 'private int massa' para 'public int massa':
-        // Ocorrência: o atributo 'massa' passa a ser acessível diretamente na classe main. c1.massa = 2 funcionaria.
+        // Não é permitido atribuir uma string para int.
+        // Ocorrência: o atributo 'massa' passa a ser acessível diretamente na classe main. Caso for c1.massa = 2 funcionaria. Entretanto, não seria uma boa prática de programação!
 
         // 3. Alteração de 'public void setVolume(double volume)' para 'private void setVolume(double volume)':
         // Ocorrência: não é mais possível chamar o método setVolume na classe Main, pois ele agora é privado.
